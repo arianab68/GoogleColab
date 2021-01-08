@@ -1,0 +1,11 @@
+familymembers = ['mom', 'dad', 'brother', 'sister', 'grandma', 'grandpa', 'aunt', 'uncle', 'dog', 'cat', 'cousin', 'stepbrother', 'stepsister', 'stepmom', 'stepdad', 'greatgrandmother', 'greatgrandfather', 'godfather', 'nephew', 'niece' ]
+print(familymembers[0:3])
+print(familymembers[2:4])
+print(familymembers[:3])
+print(familymembers[2:])
+print(familymembers[-2:])
+print(familymembers[5:8])
+print(familymembers[-5:])
+print(familymembers[:4])
+print(familymembers[0:7])
+print(familymembers[:10])
