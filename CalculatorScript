@@ -1,0 +1,62 @@
+def add(a, b):
+  return a + b
+
+def sub(a, b):
+  return a - b
+
+def multiply(a, b):  
+  return a * b
+
+def divide(a, b):
+  return a/b
+
+def calc():
+  '''
+  A simple calculator to perform binary mathematical operations
+  '''
+
+  # Boolean for running the calculator
+  is_running = True
+  # Running total to be saved by the calculator if the user wishes to save it
+  result = 0
+  # Boolean for saving the previous computation
+  save = False
+
+  while is_running:
+    operation = input('Enter a mathematical operator (+, -, *, /) [PRESS Q TO QUIT]: ')
+
+    # Checks if the user wishes to quit
+    if operation == 'Q':
+      break
+
+    # Checks if the user wanted to save the previous computation
+    # If he/she does, the previous computation becomes the first operand
+    if not save:
+      op1 = float(input('Enter the first operand: '))
+    else:
+      op1 = result
+    op2 = float(input('Enter the second operand: '))
+    # Checks which binary operation the user requested
+    if operation == '+':
+      result = add(op1, op2)
+      print('The result is', result)
+    elif operation == '-':
+      result = sub(op1, op2)
+      print('The result is', result)
+    elif operation == '*':
+      result = mult(op1, op2)
+      print('The result is', result)
+    elif operation == '/':
+      result = divide(op1, op2)
+      print('The result is', result)
+    else:
+      print(operation, 'is not a valid operation')
+
+    # Asks the user if they would like to save the previous computation
+    temp = input('Would you like to save the previous value [Y/N]? [PRESS Q TO QUIT]: ')
+    if temp == 'Y':
+      save = True
+    elif temp == 'Q':
+      break
+    else:
+      save = False
