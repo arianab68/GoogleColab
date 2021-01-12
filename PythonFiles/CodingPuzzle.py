@@ -8,4 +8,6 @@ def sum_int(num):
   else:
     for i in range (num + 1): #For every input of i i in the range of the value of num+1
       sum += i #calculate the sum for every input of i 
-  return f'The sum is {total}'
+  return (f'The sum is {total}')
+
+ 
